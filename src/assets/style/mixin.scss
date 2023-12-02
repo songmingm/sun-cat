@@ -1,0 +1,6 @@
+// 文本超出后显示省略号
+.text-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

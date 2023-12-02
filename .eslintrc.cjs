@@ -2,7 +2,7 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-13 21:25:45
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-11-13 21:48:52
+ * @LastEditTime: 2023-12-02 20:10:00
  * @Description: eslint 文件
  */
 module.exports = {
@@ -49,7 +49,7 @@ module.exports = {
         'no-duplicate-imports': ['error', { includeExports: true }], // 禁止重复模块导入
         'no-console': 'warn', // 警告 console 打印语句
         'no-empty': 'warn', // 禁止空语句块
-        'no-empty-function': 'error', // 禁止空函数
+        'no-empty-function': 'warn', // 空函数
         'no-unused-vars': 'error', // 开启没有用过的变量检测
         'spaced-comment': 'error',
         'no-trailing-spaces': 'error', // 行结束后面不要有空格
@@ -70,7 +70,7 @@ module.exports = {
                 groups: ['props', 'data', 'methods']
             }
         ], // 未使用的props，data，method
-        'vue/no-empty-component-block': 'error', // 不允许标签块为空,
+        'vue/no-empty-component-block': 'warn', // 不允许标签块为空,
         'vue/no-spaces-around-equal-signs-in-attribute': ['error'], // 不允许属性两边有空格
         'vue/no-multi-spaces': [
             'error',

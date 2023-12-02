@@ -2,11 +2,11 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-12 17:51:07
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-11-13 22:02:21
+ * @LastEditTime: 2023-11-14 20:53:11
  * @Description: 夜间模式切换组件
 -->
 <template>
-    <span
+    <div
         class="dark-switch"
         @click="toggleDark()">
         <SvgIcon
@@ -17,7 +17,7 @@
             v-else
             icon="dark"
             :size="svgSize" />
-    </span>
+    </div>
 </template>
 <script lang="ts" setup>
 import { useDark, useToggle } from '@vueuse/core'
@@ -30,5 +30,7 @@ const toggleDark = useToggle(isDark) // 切换模式
 <style lang="scss">
 .dark-switch {
     cursor: pointer;
+    height: calc(v-bind(svgSize) + 5px);
+    width: calc(v-bind(svgSize) + 5px);
 }
 </style>
