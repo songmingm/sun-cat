@@ -2,7 +2,7 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-13 21:25:45
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-02 20:10:00
+ * @LastEditTime: 2023-12-03 01:23:01
  * @Description: eslint 文件
  */
 module.exports = {
@@ -70,6 +70,12 @@ module.exports = {
                 groups: ['props', 'data', 'methods']
             }
         ], // 未使用的props，data，method
+        'vue/multi-word-component-names': [
+            'error',
+            {
+                ignores: ['404', '500']
+            }
+        ], // 组件命名格式
         'vue/no-empty-component-block': 'warn', // 不允许标签块为空,
         'vue/no-spaces-around-equal-signs-in-attribute': ['error'], // 不允许属性两边有空格
         'vue/no-multi-spaces': [
