@@ -2,7 +2,7 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-13 21:25:45
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-03 01:23:01
+ * @LastEditTime: 2023-12-03 22:20:58
  * @Description: eslint 文件
  */
 module.exports = {
@@ -50,7 +50,7 @@ module.exports = {
         'no-console': 'warn', // 警告 console 打印语句
         'no-empty': 'warn', // 禁止空语句块
         'no-empty-function': 'warn', // 空函数
-        'no-unused-vars': 'error', // 开启没有用过的变量检测
+        'no-unused-vars': 'warn', // 开启没有用过的变量检测
         'spaced-comment': 'error',
         'no-trailing-spaces': 'error', // 行结束后面不要有空格
         'vue/html-indent': [

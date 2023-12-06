@@ -2,7 +2,7 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-12-03 01:16:10
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-03 20:31:04
+ * @LastEditTime: 2023-12-06 21:05:40
  * @Description: 🖥️屏幕界面
 -->
 <template>
@@ -14,35 +14,37 @@
                 <div class="green" />
             </div>
             <div class="display_area">
-                <slot name="display" />
+                <slot
+                    name="display"
+                    class="display" />
             </div>
         </div>
     </div>
 </template>
-<script setup lang="ts"></script>
 <style lang="scss" scoped>
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    transition: transform 0.5s;
     box-sizing: border-box;
     .screen {
-        width: 80vw;
-        height: 80vh;
-        background-color: $bg-gray;
-        border-bottom-left-radius: 1vh;
-        border-bottom-right-radius: 1vh;
+        width: 80%;
+        height: 82.5%;
+        border-radius: 1vw;
         .topbar_area {
-            height: 2.5vh;
+            height: 3.5vh;
             display: flex;
             align-items: center;
-            padding-left: 1vh;
-            background-color: #ffffff;
+            padding-left: 1vw;
+            border-top-left-radius: 1vw;
+            border-top-right-radius: 1vw;
+            @include useTheme {
+                background-color: getVar('toobar');
+            }
             @mixin topbar {
-                height: 1.2vh;
-                width: 1.2vh;
+                height: 1.5vh;
+                width: 1.5vh;
                 border-radius: 50%;
                 margin: 0.2vw;
                 float: left;
@@ -61,8 +63,14 @@
             }
         }
         .display_area {
-            padding: 3vh 2vw;
-            height: 100%;
+            height: 80vh;
+            padding: 2.5vh 2vw;
+            box-sizing: border-box;
+            border-bottom-left-radius: 1vw;
+            border-bottom-right-radius: 1vw;
+            @include useTheme() {
+                background-color: getVar('bg');
+            }
         }
     }
 }

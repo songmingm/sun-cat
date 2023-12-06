@@ -1,0 +1,34 @@
+/*
+ * @Author: songmm mmsong@yeah.net
+ * @Date: 2023-11-12 16:56:56
+ * @LastEditors: songmm mmsong@yeah.net
+ * @LastEditTime: 2023-12-06 21:10:43
+ * @Description: ⭐️ 主题颜色 🌟
+ */
+$themes: (
+    light:(
+        toobar:#DDE3E9,
+        bg:#fff,
+        text:#000
+    ),
+    dark:(
+        toobar:#2D2736,
+        bg:#2D2736,
+        text:#fff
+    )
+);
+
+$currentTheme : 'light';
+@function getVar($key){
+    $themeMap: map-get($themes , $currentTheme);
+    @return map-get($themeMap, $key)
+}
+
+@mixin useTheme(){
+    @each $key, $val in $themes {
+        $currentTheme: $key !global;
+        html[data-theme='#{$key}'] & {
+            @content;
+        }
+    }
+}
