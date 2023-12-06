@@ -3,7 +3,7 @@ import ScreenDisplay from '@/components/common/ScreenDisplay.vue';
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-12 14:44:48
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-06 21:11:43
+ * @LastEditTime: 2023-12-06 21:29:22
  * @Description: 注册页面
 -->
 <template>
@@ -22,8 +22,5 @@ const { theme } = useTheme()
 <style lang="scss" scoped>
 .text {
     font-size: 50px;
-    @include useTheme() {
-        color: getVar('text');
-    }
 }
 </style>
