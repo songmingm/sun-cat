@@ -2,8 +2,8 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-12-03 01:16:10
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-06 21:05:40
- * @Description: 🖥️屏幕界面
+ * @LastEditTime: 2023-12-06 21:35:59
+ * @Description: 🖥️ 屏幕界面
 -->
 <template>
     <div class="container">
@@ -68,7 +68,7 @@
             box-sizing: border-box;
             border-bottom-left-radius: 1vw;
             border-bottom-right-radius: 1vw;
-            @include useTheme() {
+            @include useTheme {
                 background-color: getVar('bg');
             }
         }
