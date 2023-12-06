@@ -2,33 +2,40 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-12 16:56:56
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-06 21:10:43
+ * @LastEditTime: 2023-12-06 22:20:36
  * @Description: ⭐️ 主题颜色 🌟
  */
 $themes: (
-    light:(
-        toobar:#DDE3E9,
+    light:(toobar:#DDE3E9,
         bg:#fff,
-        text:#000
-    ),
-    dark:(
-        toobar:#2D2736,
+        text:#000),
+    dark:(toobar:#2D2736,
         bg:#2D2736,
-        text:#fff
-    )
+        text:#fff)
 );
 
 $currentTheme : 'light';
-@function getVar($key){
+
+@function getVar($key) {
     $themeMap: map-get($themes , $currentTheme);
     @return map-get($themeMap, $key)
 }
 
-@mixin useTheme(){
+;
+
+/* 使用: 
+ *  例:在 body{} 中使用
+ *  编译结果为 html[data-theme='#{$key}'] body {}
+ *  即会将元素名拼接在 html[data-theme='#{$key}']后
+ */
+@mixin useTheme() {
     @each $key, $val in $themes {
         $currentTheme: $key !global;
+
         html[data-theme='#{$key}'] & {
             @content;
         }
     }
 }
+
+;
