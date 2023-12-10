@@ -2,14 +2,18 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-12 16:56:56
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-06 22:27:20
+ * @LastEditTime: 2023-12-08 23:29:04
  * @Description: ⭐️ 主题颜色 🌟
  */
 $themes: (
     light:(toobar:#DDE3E9,
+        dock: rgba(0, 0, 0, 0.4),
+        dock_app_bg:#fff,
         bg:#fff,
         text:#000),
     dark:(toobar:#2D2736,
+        dock: rgba(255, 255, 255, 0.1),
+        dock_app_bg:#fff,
         bg:#2D2736,
         text:#fff)
 );

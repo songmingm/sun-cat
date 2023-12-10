@@ -3,7 +3,7 @@ import ScreenDisplay from '@/components/common/ScreenDisplay.vue';
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-12 14:44:48
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-06 21:29:22
+ * @LastEditTime: 2023-12-10 13:38:44
  * @Description: 注册页面
 -->
 <template>
@@ -15,9 +15,9 @@ import ScreenDisplay from '@/components/common/ScreenDisplay.vue';
     <div class="text">我是大傻逼</div>
 </template>
 <script setup lang="ts">
-import useTheme from '@/utils/theme'
+import { useTheme } from '@/utils/theme'
 
-const { theme } = useTheme()
+const theme = useTheme()
 </script>
 <style lang="scss" scoped>
 .text {

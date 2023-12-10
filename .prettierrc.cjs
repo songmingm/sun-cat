@@ -2,7 +2,7 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-13 21:32:00
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-11-13 22:18:41
+ * @LastEditTime: 2023-12-10 15:16:01
  * @Description: eslint 配置文件
  */
 module.exports = {

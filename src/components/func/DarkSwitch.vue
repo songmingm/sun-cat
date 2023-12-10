@@ -2,35 +2,39 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-12 17:51:07
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-11-14 20:53:11
+ * @LastEditTime: 2023-12-10 15:18:47
  * @Description: 夜间模式切换组件
 -->
 <template>
     <div
-        class="dark-switch"
-        @click="toggleDark()">
+        class="dark_switch"
+        @click="switchThemeBtn()">
         <SvgIcon
-            v-if="!isDark"
-            icon="light"
+            v-if="theme === 'dark'"
+            icon="dark"
             :size="svgSize" />
         <SvgIcon
-            v-else
-            icon="dark"
+            v-if="theme === 'light'"
+            icon="light"
             :size="svgSize" />
     </div>
 </template>
 <script lang="ts" setup>
-import { useDark, useToggle } from '@vueuse/core'
 import SvgIcon from '@/components/common/SvgIcon.vue'
-
-const svgSize: string = '50px'
-const isDark = useDark() // 当前是否为夜间模式
-const toggleDark = useToggle(isDark) // 切换模式
+import { useTheme } from '@/utils/theme'
+import { Ref, ref } from 'vue'
+const svgSize: string = '4.5vh'
+const theme = useTheme()
+const isDark: Ref<boolean> = ref(theme.value === 'dark') // 是否是暗夜模式
+const switchThemeBtn = () => {
+    isDark.value ? (theme.value = 'light') : (theme.value = 'dark')
+    isDark.value = !isDark.value
+}
 </script>
 <style lang="scss">
-.dark-switch {
+.dark_switch {
     cursor: pointer;
-    height: calc(v-bind(svgSize) + 5px);
-    width: calc(v-bind(svgSize) + 5px);
+    height: calc(v-bind(svgSize) + 1vw);
+    width: calc(v-bind(svgSize) + 1vw);
 }
 </style>
