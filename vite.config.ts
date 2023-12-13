@@ -2,7 +2,7 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-13 21:22:26
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-06 20:25:25
+ * @LastEditTime: 2023-12-10 23:11:58
  * @Description: vite 配置
  */
 import { defineConfig } from 'vite'

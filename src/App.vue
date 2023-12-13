@@ -2,7 +2,7 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-13 21:22:26
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-09 21:12:39
+ * @LastEditTime: 2023-12-10 18:46:27
  * @Description: App 根组件
 -->
 <template>
@@ -18,5 +18,5 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import ScreenDisplay from '@/components/common/ScreenDisplay.vue'
-import ToolsApp from '@/components/common/ToolsApp.vue'
+import ToolsApp from '@/components/func/ToolsApp.vue'
 </script>

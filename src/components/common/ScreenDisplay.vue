@@ -2,12 +2,14 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-12-03 01:16:10
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-08 21:36:00
+ * @LastEditTime: 2023-12-10 19:47:41
  * @Description: 🖥️ 屏幕界面
 -->
 <template>
     <div class="container">
-        <div class="screen">
+        <div
+            id="screen"
+            class="screen">
             <div class="topbar_area">
                 <div class="red" />
                 <div class="yellow" />
@@ -82,7 +84,7 @@
             }
         }
         .dock {
-            height: 6vh;
+            height: 6.5vh;
             width: 60%;
             position: relative;
             bottom: 8vh;

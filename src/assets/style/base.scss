@@ -15,9 +15,10 @@ body {
     @include useTheme {
         color: getVar('text');
     }
-    
+
 }
-#app{
+
+#app {
     position: relative;
     top: 10%;
 }
