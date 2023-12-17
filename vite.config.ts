@@ -2,7 +2,7 @@
  * @Author: songmm mmsong@yeah.net
  * @Date: 2023-11-13 21:22:26
  * @LastEditors: songmm mmsong@yeah.net
- * @LastEditTime: 2023-12-10 23:11:58
+ * @LastEditTime: 2023-12-17 14:25:07
  * @Description: vite 配置
  */
 import { defineConfig } from 'vite'
@@ -46,7 +46,6 @@ export default defineConfig({
             scss: {
                 // eslint-disable-next-line prettier/prettier, quotes
                 additionalData: `
-                     @use "@/assets/style/element" as *;
                      @use "@/assets/style/theme" as *;
                      `
             }
